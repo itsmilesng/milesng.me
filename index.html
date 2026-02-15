@@ -10,10 +10,13 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: #0f172a;
       color: #e5e7eb;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-      padding: 24px;
+
+      /* No vertical centering tricks */
+      display: flex;
+      justify-content: center;
+
+      /* Natural spacing like Sherry's page */
+      padding: 60px 20px 40px;
     }
 
     .card {
@@ -73,6 +76,22 @@
       margin-top: 32px;
       font-size: 0.85rem;
       color: rgba(148,163,184,0.8);
+    }
+
+    /* Small-screen tuning */
+    @media (max-width: 420px) {
+      body {
+        padding: 50px 16px 32px;
+      }
+      .card {
+        padding: 36px 22px 28px;
+      }
+      h1 {
+        font-size: 1.7rem;
+      }
+      .tagline {
+        margin-bottom: 26px;
+      }
     }
   </style>
 </head>
