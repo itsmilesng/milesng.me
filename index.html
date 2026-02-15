@@ -11,12 +11,14 @@
       background: #0f172a;
       color: #e5e7eb;
 
-      /* No vertical centering tricks */
+      /* Full viewport height and vertical centering */
+      min-height: 100vh;
       display: flex;
       justify-content: center;
+      align-items: center;
 
-      /* Natural spacing like Sherry's page */
-      padding: 60px 20px 40px;
+      /* Side breathing room + safe area */
+      padding: 0 20px;
     }
 
     .card {
@@ -27,6 +29,9 @@
       border-radius: 16px;
       padding: 44px 28px 36px;
       background: rgba(15,23,42,0.6);
+
+      /* Centered with small vertical breathing room */
+      margin: 20px auto;
     }
 
     h1 {
@@ -78,20 +83,20 @@
       color: rgba(148,163,184,0.8);
     }
 
-    /* Small-screen tuning */
+    /* Mobile tuning */
     @media (max-width: 420px) {
       body {
-        padding: 50px 16px 32px;
+        padding: 0 16px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 15vh;
       }
       .card {
         padding: 36px 22px 28px;
+        margin: 0 auto;
       }
-      h1 {
-        font-size: 1.7rem;
-      }
-      .tagline {
-        margin-bottom: 26px;
-      }
+      h1 { font-size: 1.7rem; }
+      .tagline { margin-bottom: 26px; }
     }
   </style>
 </head>
